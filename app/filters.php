@@ -40,7 +40,7 @@ App::after(function($request, $response)
 
 Route::filter('auth', function(){
 
-	if(!Sentry::check()) return Redirect::route('login');
+	if(!Sentry::check()) return Redirect::guest('login');
 });
 
 
